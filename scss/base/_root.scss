@@ -1,0 +1,29 @@
+// color
+$orange: #ff7700;
+$red: #e31730;
+$gray1: #e2e2e2;
+$gray2: #938783;
+$gray3: #534844;
+$black: #212529;
+
+// space
+
+$micro: 4px;
+$small: 10px;
+$base: 15px;
+$medium: 20px;
+$large: 30px; 
+
+//font 
+
+$ft-micro: 12px;
+$ft-small: 14px;
+$ft-base: 16px;
+$ft-medium: 20px;
+$ft-large: 32px;
+$ft-grand: 45px;
+
+@font-face {
+  font-family: 'ds-digital';
+  src: url('../../font/DS-DIGIT.TTF') format('truetype');
+}

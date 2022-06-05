@@ -1,0 +1,222 @@
+header {
+  position: relative;
+  background-color: rgba(0,0,0,0.7);
+  margin-bottom: -52px;
+}
+
+.logo {
+  position: absolute;
+  top: -50%;
+  left: $base;
+  width: 50px;
+  z-index: 10;
+}
+
+// 탑 메뉴
+
+.top-bar {
+  background-color: $orange;
+  
+  &__inner {
+    display: flex;
+    justify-content: end;
+    padding: 0 $base;
+  }
+
+  .sns {
+    display: none;
+  }
+}
+
+.user {
+  margin-right: -$small;
+  display: flex;
+
+  &__item {
+    font-size: $ft-micro;
+    font-weight: 400;
+    color: #fff;
+    padding: $small;
+  }
+}
+// 사이트 메뉴
+
+.nav {
+  display: flex;
+  justify-content: end;
+  position: relative;
+  padding: $base $small*1.5;
+  
+  input {
+    display: none;
+  }
+}
+
+// 사이트 메뉴 > 버튼
+
+.site-nav-btn {
+  display: block;
+  position: relative;
+  width: 28px;
+  height: 2px;
+  padding: $small 0;
+  background-color: #fff;
+  background-clip:content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+
+  &:hover::before {
+    transform: translateY(-3px);
+  }
+  
+  &:hover::after {
+    transform: translateY(3px);
+  }
+  
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 28px;
+    height: 2px;
+    background-color: #fff;
+    transition: .3s ease-in-out;
+    z-index: 10;
+  }
+  
+  &::before {
+    top: 100%;
+  }
+  
+  &::after {
+    bottom: 100%;
+  }
+}
+
+// 사이트 메뉴 > 버튼 동작!
+#nav-btn {
+
+  &:checked ~ .site-nav {
+    left: 0;
+  }
+
+  &:checked + .site-nav-btn {
+    background-color: transparent;
+  }
+
+  &:checked + .site-nav-btn .dim {
+    display: block;
+  }
+
+  &:checked + .site-nav-btn::before {
+    transform: translateY(-12px) rotate(45deg);
+  }
+  
+  &:checked + .site-nav-btn::after {
+    transform: translateY(12px) rotate(-45deg);
+  }
+}
+
+// 사이트 메뉴 (모바일) 사이드
+
+.site-nav {
+  position: fixed;
+  left: -300px;
+  top: 0;
+  width: 300px;
+  height: 100vh;
+  padding-top: $base;
+  background-color: $black;
+  transition: .3s;
+  z-index: 10;
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    padding-left: $base;
+    padding-bottom: $base;
+    border-bottom: 1px solid $gray3;
+  }
+
+  &__logo-img1 {
+    width: 40px;
+  }
+
+  &__logo-img2 {
+    width: 110px;
+    padding-left: $medium;
+    padding-bottom: $micro;
+  }
+
+  &__item {
+    color: #fff;
+    border-bottom: 1px solid $gray3;
+    max-height: 54px;
+    overflow: hidden;
+  }
+
+  &__item:hover {
+    background-color: $orange;
+    max-height: 100%;
+  }
+
+  &__item:hover &__sub li {
+    transform: translateX(0);
+  }
+
+  &__link {
+    padding: $base;
+  }
+}
+
+.dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1;
+}
+
+.site-nav__sub {
+  background-color: $black;
+  transition: .5s;
+  
+  li {
+    transform: translateX(-60px) skew(20deg);
+    transition: .3s ease-in-out;
+  }
+
+  a{
+    font-size: $ft-small;
+    padding: $small $base;
+  }
+
+  a:hover {
+    color: $orange;
+  }
+}
+
+.sns {
+  display: flex;
+  align-items: center;
+  padding: $base 0;
+
+  a {
+    width: 20px;
+    padding: 0 $small;
+  }
+
+  img {
+    transition: .3s;
+  }
+
+  a:hover img {
+    filter:invert(50%);
+  }
+}
+

@@ -1,0 +1,42 @@
+@media screen and (min-width:768px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .top-bar__inner {
+    justify-content: space-between;
+
+    .sns {
+      display: flex;
+      padding: 0;
+      margin-left: $large*3;
+    }
+  }
+
+  .slide__item {
+    height: 550px;
+  }
+
+  .rank,
+  .league-table {
+  }
+  
+  .rank {
+    width: 40%;
+  }
+  .league-table {
+    width: 60%;
+  }
+
+  .league-info__inner {
+    max-width: 1000px;
+  }
+
+  .next__team {
+
+    figure {
+      width: 130px;
+    }
+  }
+}
+
