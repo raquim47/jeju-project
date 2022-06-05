@@ -125,29 +125,35 @@
     </nav>
   </header>
   <!-- section01 메인 슬라이드  -->
-  <section class="main-slide">
+  <section class="main-swiper">
     <h2 class="hide">메인 슬라이드</h2>
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <img class="swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
-        </div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
-      </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-    
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-    
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      <a href="#" class="swiper-slide">
+        <figure>
+          <img class="main-swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
+          <figcaption class="main-swiper__caption">
+            <small class="main-swiper__index">01</small>
+            <h3 class="main-swiper__title">Lorem ipsum dolor sit amet.</h3>
+            <p class="main-swiper__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, error.</p>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#" class="swiper-slide">
+        <figure>
+          <img class="main-swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
+          <figcaption class="main-swiper__caption">
+            <small class="main-swiper__index">01</small>
+            <h3 class="main-swiper__title">Lorem ipsum dolor sit amet.</h3>
+            <p class="main-swiper__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, error.</p>
+          </figcaption>
+        </figure>
+      </a>
     </div>
+    <!-- If we need pagination -->
+    <div class="main-swiper__pagination"></div>
+  </section>
   </section>
   <!-- section02 리그 정보 -->
   <section class="league-info">
