@@ -1,21 +1,14 @@
 header {
-  position: relative;
-  z-index: 10;
-  background-color: rgba(0,0,0,0.7);
-  margin-bottom: -52px;
-}
-
-.logo {
-  position: absolute;
-  top: -50%;
-  left: $base;
-  width: 50px;
-  z-index: 10;
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: $z2;
 }
 
 // 탑 메뉴
 
-.top-bar {
+.header-top {
   background-color: $orange;
   
   &__inner {
@@ -30,32 +23,40 @@ header {
 }
 
 .user {
-  margin-right: -$small;
   display: flex;
+  margin-right: -$small;
 
   &__item {
+    padding: $small;
     font-size: $ft-micro;
     font-weight: 400;
     color: #fff;
-    padding: $small;
   }
 }
 // 사이트 메뉴
 
-.nav {
+.header-bottom {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   position: relative;
-  padding: $base $small*1.5;
+  padding: 0 $base;
   
   input {
     display: none;
   }
 }
 
-// 사이트 메뉴 > 버튼
+.logo {
+  margin-top: -28px;
+  width: 50px;
+}
 
-.site-nav-btn {
+// 사이트 메뉴 > 버튼
+.site-nav-wrap {
+  padding: $base;
+  margin-right: -$base;
+}
+.site-nav-btn{
   display: block;
   position: relative;
   width: 28px;
@@ -84,7 +85,7 @@ header {
     height: 2px;
     background-color: #fff;
     transition: .3s ease-in-out;
-    z-index: 10;
+    z-index: $z3;
   }
   
   &::before {
@@ -94,10 +95,20 @@ header {
   &::after {
     bottom: 100%;
   }
+
+  .dim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+  }
 }
 
 // 사이트 메뉴 > 버튼 동작!
-#nav-btn {
+#site-nav-btn {
 
   &:checked ~ .site-nav {
     left: 0;
@@ -131,7 +142,7 @@ header {
   padding-top: $base;
   background-color: $black;
   transition: .3s;
-  z-index: 10;
+  z-index: $z3;
 
   &__logo {
     display: flex;
@@ -172,17 +183,6 @@ header {
   }
 }
 
-.dim {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.8);
-  z-index: 1;
-}
-
 .site-nav__sub {
   background-color: $black;
   transition: .5s;
@@ -221,3 +221,102 @@ header {
   }
 }
 
+@media screen and (min-width:768px) {
+  .header-top__inner {
+    justify-content: space-between;
+
+    .sns {
+      display: flex;
+      padding: 0;
+      margin-left: $large*3;
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .logo {
+    width: 60px;
+    margin-top: -28px;
+  }
+
+  .site-nav-wrap {
+    padding: 0;
+    margin-right: 0;
+  }
+  .site-nav-btn{
+    display: none;
+  }
+
+  .site-nav {
+    position: relative;
+    left:0;
+    margin-right: -$base;
+    height: auto;
+    width: auto;
+    padding-top: 0;
+    background-color: transparent;
+
+    &__logo {
+      display: none;
+    }
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      position: relative;
+      border: none;
+      max-height: 64px;
+      overflow: visible;
+    }
+
+    &__item:hover &__sub {
+      max-height: 100%;
+    }
+
+    &__item:hover &__sub::after {
+      height: 40px;
+    }
+
+    &__link {
+      padding: $medium;
+    }
+
+    .sns {
+      display: none;
+    }
+  }
+
+  .site-nav__sub {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    max-height: 0;
+    background-color: transparent;
+    overflow: hidden;
+
+    li {
+      position: relative;
+      color: $black;
+      z-index: $z2;
+    }
+
+    a {
+      padding: $small;
+      white-space: nowrap;
+    }
+  }
+
+  .site-nav__sub::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 0;
+    background-color: #fff;
+    transition: .3s ease-in-out;
+  }
+}

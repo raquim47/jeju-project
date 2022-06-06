@@ -14,306 +14,325 @@
   <!-- 헤더 -->
   <header>
     <!-- 헤더 > 탑 메뉴 -->
-    <div class="top-bar">
-      <div class="container">
-        <div class="top-bar__inner">
-          <div class="sns">
-            <a href="#"><img src="img/sns1.png" alt="insta"></a>
-            <a href="#"><img src="img/sns2.png" alt="youtube"></a>
-            <a href="#"><img src="img/sns3.png" alt="facebook"></a>
-          </div>
-          <ul class="user">
-            <a class="user__item" href="#">LOGIN</a>
-            <a class="user__item" href="#">JOIN</a>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <nav class="nav container">
-      <h1 class="logo">
-        <a href="#"><img src="img/jeju-logo.png" alt=""></a>
-      </h1>
-      <!-- 네비게이션 메뉴 버튼 -->
-      <input type="checkbox" id="nav-btn">
-      <label for="nav-btn" class="site-nav-btn">
-        <span class="hide">navigation button</span>
-        <div class="dim">
-          <span class="hide">dim</span>
-        </div>
-      </label>
-      <!-- 네비게이션 메뉴 -->
-      <div class="site-nav">
-        <h3 class="site-nav__logo">
-          <img class="site-nav__logo-img1" src="img/jeju-logo.png" alt="navigation logo">
-          <img class="site-nav__logo-img2"src="img/jeju-logo-txt.png" alt="navigation logo">
-        </h3>
-        <ul class="site-nav__list">
-          <!-- 대메뉴 -->
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">CLUB</a>
-            <ul class="site-nav__sub">
-              <!-- 소메뉴 -->
-              <li><a href="#">구단 연혁</a></li>
-              <li><a href="#">상징/유니폼</a></li>
-              <li><a href="#">마스코트</a></li>
-              <li><a href="#">홈구장</a></li>
-              <li><a href="#">클럽 하우스</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">NEWS</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">공지사항</a></li>
-              <li><a href="#">Orange News</a></li>
-              <li><a href="#">Orange TV</a></li>
-              <li><a href="#">지역행사</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">TICKET</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">빠른예매</a></li>
-              <li><a href="#">좌석정보</a></li>
-              <li><a href="#">관람수칙</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item">
-            <a class="site-nav__link" href="#">MATCH</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">경기일정</a></li>
-              <li><a href="#">리뷰/프리뷰</a></li>
-              <li><a href="#">경기 하이라이트</a></li>
-              <li><a href="#">구단/개인 순위</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">TEAM</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">선수단</a></li>
-              <li><a href="#">코치진</a></li>
-              <li><a href="#">지원 스탭</a></li>
-              <li><a href="#">U12</a></li>
-              <li><a href="#">U15</a></li>
-              <li><a href="#">U18</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">FANZONE</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">서포터즈 소개</a></li>
-              <li><a href="#">맴버쉽 정보</a></li>
-              <li><a href="#">응원가</a></li>
-              <li><a href="#">쇼핑몰</a></li>
-            </ul>
-          </li>
-          <li class="site-nav__item"><a class="site-nav__link" href="#">COMMUNITY</a>
-            <ul class="site-nav__sub">
-              <li><a href="#">제주 서포터즈</a></li>
-              <li><a href="#">맴버쉽 정보</a></li>
-              <li><a href="#">이벤트</a></li>
-              <li><a href="#">공식 SNS</a></li>
-              <li><a href="#">자주하는 질문</a></li>
-            </ul>
-          </li>
-          
-        </ul>
-        <!-- sns 아이콘 메뉴 -->
+    <div class="header-top">
+      <div class="header-top__inner container">
         <div class="sns">
           <a href="#"><img src="img/sns1.png" alt="insta"></a>
           <a href="#"><img src="img/sns2.png" alt="youtube"></a>
           <a href="#"><img src="img/sns3.png" alt="facebook"></a>
         </div>
+        <ul class="user">
+          <a class="user__item" href="#">LOGIN</a>
+          <a class="user__item" href="#">JOIN</a>
+        </ul>
       </div>
-    </nav>
+    </div>
+    <div class="header-bottom container">
+      <h1 class="logo">
+        <a href="#"><img src="img/logo-jeju.png" alt="logo-jeju"></a>
+      </h1>
+      <!-- 네비게이션 메뉴  -->
+      <nav class="site-nav-wrap">
+        <input type="checkbox" id="site-nav-btn">
+        <label for="site-nav-btn" class="site-nav-btn">
+          <span class="hide">navigation button</span>
+          <div class="dim">
+            <span class="hide">dim</span>
+          </div>
+        </label>
+        <div class="site-nav">
+          <h3 class="site-nav__logo">
+            <img class="site-nav__logo-img1" src="img/logo-jeju.png" alt="jeju-logo">
+            <img class="site-nav__logo-img2"src="img/logo-jeju-txt.png" alt="jeju-logo-txt">
+          </h3>
+          <ul class="site-nav__list">
+            <!-- 대메뉴 -->
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">CLUB</a>
+              <ul class="site-nav__sub">
+                <!-- 소메뉴 -->
+                <li><a href="#">구단 연혁</a></li>
+                <li><a href="#">상징/유니폼</a></li>
+                <li><a href="#">마스코트</a></li>
+                <li><a href="#">홈구장</a></li>
+                <li><a href="#">클럽 하우스</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">NEWS</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">Orange News</a></li>
+                <li><a href="#">Orange TV</a></li>
+                <li><a href="#">지역행사</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">TICKET</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">빠른예매</a></li>
+                <li><a href="#">좌석정보</a></li>
+                <li><a href="#">관람수칙</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">MATCH</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">경기일정</a></li>
+                <li><a href="#">리뷰/프리뷰</a></li>
+                <li><a href="#">경기 하이라이트</a></li>
+                <li><a href="#">구단/개인 순위</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#">TEAM</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">선수단</a></li>
+                <li><a href="#">코치진</a></li>
+                <li><a href="#">지원 스탭</a></li>
+                <li><a href="#">U12</a></li>
+                <li><a href="#">U15</a></li>
+                <li><a href="#">U18</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#">FANZONE</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">서포터즈 소개</a></li>
+                <li><a href="#">맴버쉽 정보</a></li>
+                <li><a href="#">응원가</a></li>
+                <li><a href="#">쇼핑몰</a></li>
+              </ul>
+            </li>
+            <li class="site-nav__item"><a class="site-nav__link" href="#">COMMUNITY</a>
+              <ul class="site-nav__sub">
+                <li><a href="#">제주 서포터즈</a></li>
+                <li><a href="#">맴버쉽 정보</a></li>
+                <li><a href="#">이벤트</a></li>
+                <li><a href="#">공식 SNS</a></li>
+                <li><a href="#">자주하는 질문</a></li>
+              </ul>
+            </li>
+            
+          </ul>
+          <!-- sns 아이콘 메뉴 -->
+          <div class="sns">
+            <a href="#"><img src="img/sns1.png" alt="insta"></a>
+            <a href="#"><img src="img/sns2.png" alt="youtube"></a>
+            <a href="#"><img src="img/sns3.png" alt="facebook"></a>
+          </div>
+        </div>
+      </nav>
+    </div>
   </header>
-  <!-- section01 메인 슬라이드  -->
-  <section class="main-swiper">
-    <h2 class="hide">메인 슬라이드</h2>
-    <!-- Additional required wrapper -->
-    <div class="swiper-wrapper">
-      <!-- Slides -->
-      <a href="#" class="swiper-slide">
-        <figure>
-          <img class="main-swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
-          <figcaption class="main-swiper__caption">
-            <small class="main-swiper__index">01</small>
-            <h3 class="main-swiper__title">Lorem ipsum dolor sit amet.</h3>
-            <p class="main-swiper__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, error.</p>
-          </figcaption>
-        </figure>
-      </a>
-      <a href="#" class="swiper-slide">
-        <figure>
-          <img class="main-swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
-          <figcaption class="main-swiper__caption">
-            <small class="main-swiper__index">01</small>
-            <h3 class="main-swiper__title">Lorem ipsum dolor sit amet.</h3>
-            <p class="main-swiper__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum, error.</p>
-          </figcaption>
-        </figure>
-      </a>
-    </div>
-    <!-- If we need pagination -->
-    <div class="main-swiper__pagination"></div>
-  </section>
-  </section>
-  <!-- section02 리그 정보 -->
-  <section class="league-info">
-    <h2 class="league-info__title">
-      LEAGUE<br>
-      <strong class="bold">INFO</strong>RMATION
-    </h2>
-    <div class="league-info__inner">
-      <!-- 리그 정보 > 현재 순위 -->
-      <div class="rank league-info__item">
-        <div class="rank__data">
-          <small>K league 1</small>
-          <strong>3</strong>
-          <h3>현재 순위 3위</h3>
-          <p>2022.05.22 (4승 5무 5패 / 17점)</p>
-          <button class="btn">LEARN MORE<i class="fa-solid fa-angle-right"></i></button>
-        </div>
-      </div>
-      <!-- 경기 정보 > 순위 테이블 -->
-      <div class="league-table league-info__item">
-        <h3 class="hide">순위표</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>순위</th>
-              <th>클럽</th>
-              <th>경기</th>
-              <th>승점</th>
-              <th>승</th>
-              <th>무</th>
-              <th>패</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td><img class="league-table__logo" src="img/ulsan-rank.png" alt="ulsan">울산 현대 축구단</td>
-              <td>11</td>
-              <td>26</td>
-              <td>8</td>
-              <td>2</td>
-              <td>1</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td><img class="league-table__logo" src="img/pohang-rank.png" alt="pohang">포항 스틸러스</td>
-              <td>11</td>
-              <td>19</td>
-              <td>5</td>
-              <td>4</td>
-              <td>2</td>
-            </tr>
-            <tr class="league-table__ourTeam">
-              <td>3</td>
-              <td><img class="league-table__logo" src="img/jeju-rank.png" alt="jeju">제주 유나이티드</td>
-              <td>11</td>
-              <td>19</td>
-              <td>5</td>
-              <td>4</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td><img class="league-table__logo" src="img/jeonbuk-rank.png" alt="jeonbuk">전북 현대 모터스</td>
-              <td>11</td>
-              <td>19</td>
-              <td>5</td>
-              <td>4</td>
-              <td>2</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <!-- 경기 정보 > 경기 결과 -->
-      <div class="result league-info__item">
-        <h3>MATCH RESULT</h3>
-        <div class="result__team">
-          <img src="img/jeju-match.png" alt="jeju-match">
-          <img src="img/pohang-match.png" alt="pohang-match">
-        </div>
-        <div class="result__info">
-          <small>2022.05.20 (금)</small>
-          <strong>2 : 1</strong>
-          <b>제주월드컵경기장</b>
-          <div class="result__btn">
-            <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
-            <button class="btn">경기기록<i class="fa-solid fa-angle-right"></i></button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 경기 정보 > 다음 경기 -->
-    <div class="next league-info__item">
-      <div class="next__title">
-        <h3>NEXT MATCH</h3>
-        <div class="d-day">
-          <div class="d-day__time">
-            <h4 id="day">00</h4>
-            <small>DAY</small>
-          </div>
-          <div class="d-day__time">
-            <h4 id="hour">00</h4>
-            <small>HOUR</small>
-          </div>
-          <div class="d-day__time">
-            <h4 id="minute">00</h4>
-            <small>MIN</small>
-          </div>
-          <div class="d-day__time">
-            <h4 id="second">00</h4>
-            <small>SEC</small>
-          </div>
-        </div>
-        <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
-      </div>
-      <div class="next__data">
-        <strong>VS</strong>
-        <small>
-          2022.06.22(수) 19:00<br>
-          서울월드컵경기장
-        </small>
-        <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
-        <div class="next__team">
+  <main class="main-wrapper">
+    <!-- section01 메인 슬라이드  -->
+    <section class="main-swiper">
+      <h2 class="hide">메인 슬라이드</h2>
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <a href="#" class="swiper-slide">
           <figure>
-            <img src="img/seoul-match.png" alt="">
-            <figcaption>서울FC</figcaption>
+            <img class="main-swiper__img" src="/img/main-slide-01.jpeg" alt="slide-img">
+            <div class="main-swiper__txt-wrapper">
+              <figcaption class="main-swiper__caption">
+                <small class="main-swiper__index">01</small>
+                <h3 class="main-swiper__title">제주UTD 홈경기 예매 바로가기  </h3>
+                <p class="main-swiper__content">다음경기 : 06.18 (토) 18:00 VS 인천</p>
+              </figcaption>
+            </div>
           </figure>
+        </a>
+        <a href="#" class="swiper-slide">
           <figure>
-            <img src="img/jeju-match.png" alt="">
-            <figcaption>제주UTD</figcaption>
+            <img class="main-swiper__img" src="/img/main-slide-02.jpeg" alt="slide-img">
+            <div class="main-swiper__txt-wrapper">
+              <figcaption class="main-swiper__caption">
+                <small class="main-swiper__index">02</small>
+                <h3 class="main-swiper__title">주민규 멀티골 제주, 전북 원정서 2-0 승</h3>
+                <p class="main-swiper__content">제주유나이티드(이하 제주)가 전북 현대를 꺾고 무승에서 탈출했다. 제주는 28일 오후 7시 전주월드컵경기장에서 치러진 전북과의 하나원큐 K리그1 2022 15라운드 경기에서 2-0 승리를 거뒀다.</p>
+              </figcaption>
+            </div>
           </figure>
+        </a>
+        <a href="#" class="swiper-slide">
+          <figure>
+            <img class="main-swiper__img" src="/img/main-slide-03.jpeg" alt="slide-img">
+            <div class="main-swiper__txt-wrapper">
+              <figcaption class="main-swiper__caption">
+                <small class="main-swiper__index">03</small>
+                <h3 class="main-swiper__title">남기일 감독 "매 경기 절실하면 우승도 가능하다"</h3>
+                <p class="main-swiper__content">남기일 감독이 승리의 요인으로 2가지를 뽑았다. 제주유나이티드(이하 제주)는 28일 오후 7시 전주월드컵경기장에서 치러진 전북 현대와의 하나원큐 K리그1 2022 15라운드 경기에서 2-0으로 승리했다.</p>
+              </figcaption>
+            </div>
+          </figure>
+        </a>
+      </div>
+      <!-- If we need pagination -->
+      <div class="main-swiper__pagination">
+
+        
+      </div>
+    </section>
+    <!-- section02 리그 정보 -->
+    <section class="league-info">
+      <h2 class="league-info__title">
+        LEAGUE<br>
+        <strong class="bold">INFO</strong>RMATION
+      </h2>
+      <div class="league-info__inner">
+        <!-- 리그 정보 > 현재 순위 -->
+        <div class="rank league-info__item">
+          <div class="rank__data">
+            <small>K league 1</small>
+            <strong>3</strong>
+            <h3>현재 순위 3위</h3>
+            <p>2022.05.22 (4승 5무 5패 / 17점)</p>
+            <button class="btn">LEARN MORE<i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </div>
+        <!-- 경기 정보 > 순위 테이블 -->
+        <div class="league-table league-info__item">
+          <h3 class="hide">순위표</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>순위</th>
+                <th>클럽</th>
+                <th>경기</th>
+                <th>승점</th>
+                <th>승</th>
+                <th>무</th>
+                <th>패</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><img class="league-table__logo" src="img/ulsan-rank.png" alt="ulsan">울산 현대 축구단</td>
+                <td>11</td>
+                <td>26</td>
+                <td>8</td>
+                <td>2</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><img class="league-table__logo" src="img/pohang-rank.png" alt="pohang">포항 스틸러스</td>
+                <td>11</td>
+                <td>19</td>
+                <td>5</td>
+                <td>4</td>
+                <td>2</td>
+              </tr>
+              <tr class="league-table__ourTeam">
+                <td>3</td>
+                <td><img class="league-table__logo" src="img/jeju-rank.png" alt="jeju">제주 유나이티드</td>
+                <td>11</td>
+                <td>19</td>
+                <td>5</td>
+                <td>4</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><img class="league-table__logo" src="img/jeonbuk-rank.png" alt="jeonbuk">전북 현대 모터스</td>
+                <td>11</td>
+                <td>19</td>
+                <td>5</td>
+                <td>4</td>
+                <td>2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 경기 정보 > 경기 결과 -->
+        <div class="result league-info__item">
+          <h3>MATCH RESULT</h3>
+          <div class="result__team">
+            <img src="img/jeju-match.png" alt="jeju-match">
+            <img src="img/pohang-match.png" alt="pohang-match">
+          </div>
+          <div class="result__info">
+            <small>2022.05.20 (금)</small>
+            <strong>2 : 1</strong>
+            <b>제주월드컵경기장</b>
+            <div class="result__btn">
+              <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
+              <button class="btn">경기기록<i class="fa-solid fa-angle-right"></i></button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <!-- section03 지난 경기 mom -->
-  <section class="mom">
-    <h2>LAST ROUND MOM</h2>
-    <div class="mom__tbox">
-      <strong class="mom__name">JU MINGYU</strong>
-      <p>90.04.14 / 183cm / 83kg</p>
-      <b class="mom__vs">VS 부천</b>
-      <dl class="mom__data">
-        <dd>
-          <small>골</small>
-          <strong>3</strong>
-        </dd>
-        <dd>
-          <small>유효슈팅률</small>
-          <strong>100%</strong>
-        </dd>
-        <dd>
-          <small>평점</small>
-          <strong>9.0</strong>
-        </dd>
-      </dl>
-      <button class="btn">프로필 상세<i class="fa-solid fa-angle-right"></i></button>
-      <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
-    </div>
-  </section>
+      <!-- 경기 정보 > 다음 경기 -->
+      <div class="next league-info__item">
+        <div class="next__title">
+          <h3>NEXT MATCH</h3>
+          <div class="d-day">
+            <div class="d-day__time">
+              <h4 id="day">00</h4>
+              <small>DAY</small>
+            </div>
+            <div class="d-day__time">
+              <h4 id="hour">00</h4>
+              <small>HOUR</small>
+            </div>
+            <div class="d-day__time">
+              <h4 id="minute">00</h4>
+              <small>MIN</small>
+            </div>
+            <div class="d-day__time">
+              <h4 id="second">00</h4>
+              <small>SEC</small>
+            </div>
+          </div>
+          <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
+        </div>
+        <div class="next__data">
+          <strong>VS</strong>
+          <small>
+            2022.06.22(수) 19:00<br>
+            서울월드컵경기장
+          </small>
+          <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
+          <div class="next__team">
+            <figure>
+              <img src="img/seoul-match.png" alt="">
+              <figcaption>서울FC</figcaption>
+            </figure>
+            <figure>
+              <img src="img/jeju-match.png" alt="">
+              <figcaption>제주UTD</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- section03 지난 경기 mom -->
+    <section class="mom">
+      <h2>LAST ROUND MOM</h2>
+      <div class="mom__tbox">
+        <strong class="mom__name">JU MINGYU</strong>
+        <p>90.04.14 / 183cm / 83kg</p>
+        <b class="mom__vs">VS 부천</b>
+        <dl class="mom__data">
+          <dd>
+            <small>골</small>
+            <strong>3</strong>
+          </dd>
+          <dd>
+            <small>유효슈팅률</small>
+            <strong>100%</strong>
+          </dd>
+          <dd>
+            <small>평점</small>
+            <strong>9.0</strong>
+          </dd>
+        </dl>
+        <button class="btn">프로필 상세<i class="fa-solid fa-angle-right"></i></button>
+        <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
+      </div>
+    </section>
+  </main>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/custom.js "></script>
   <script src="js/countdown.js"></script>

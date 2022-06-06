@@ -1,3 +1,13 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// 전체 래퍼 박스
+.main-wrapper {
+  padding-top: 37px;
+}
+
+// 가운데 정렬 컨테이너
 .container {
   width: 100%;
   margin: 0 auto;
@@ -36,5 +46,17 @@ a {
   &:hover {
     background-color: $red;
     border: 2px solid transparent;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .container {
+    max-width: 1140px;
   }
 }

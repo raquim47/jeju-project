@@ -23,6 +23,17 @@ $ft-medium: 20px;
 $ft-large: 32px;
 $ft-grand: 45px;
 
+// z-index
+
+$z1 : 1;
+$z2 : 10;
+$z3 : 100;
+$z4 : 1000;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// font-family: 'Montserrat', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+// font-family: 'Open Sans', sans-serif;
 @font-face {
   font-family: 'ds-digital';
   src: url('../../font/DS-DIGIT.TTF') format('truetype');
