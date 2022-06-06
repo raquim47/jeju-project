@@ -577,7 +577,7 @@ header {
 }
 
 .league-info {
-  padding: 30px 0;
+  padding-top: 30px;
 }
 
 .league-info__inner {
@@ -594,7 +594,6 @@ header {
 
 .league-info__item {
   width: 100%;
-  margin-bottom: 15px;
 }
 
 .rank {
@@ -612,7 +611,7 @@ header {
   top: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(245, 130, 35, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .rank__data {
@@ -843,7 +842,6 @@ header {
 
 .mom {
   position: relative;
-  margin-top: 30px;
   width: 100%;
   height: 400px;
   background-image: url(../../img/mom.jpeg);
@@ -860,43 +858,37 @@ header {
   left: 0;
   bottom: 0;
   right: 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, transparent), color-stop(70%, #ff7700));
-  background: linear-gradient(to right, transparent 20%, #ff7700 70%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(10%, transparent), color-stop(70%, #000));
+  background: linear-gradient(to right, transparent 10%, #000 70%);
 }
 
-.mom h2 {
-  position: absolute;
-  top: 12%;
-  right: 6%;
-  padding-bottom: 2px;
-  font-size: 20px;
-  color: #fff;
-  border-bottom: 2px solid #fff;
-  text-align: center;
-  z-index: 5;
+.mom__inner {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  border-top: 1px solid #e2e2e2;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
 }
 
 .mom__tbox {
-  position: absolute;
-  right: 6%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 400px;
-  padding: 32px 0;
   text-align: right;
   color: #fff;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  padding: 15px;
+}
+
+.mom h2 {
+  font-size: 20px;
 }
 
 .mom__name {
-  position: relative;
   font-size: 51.2px;
-}
-
-.mom__vs {
-  font-size: 20px;
 }
 
 .mom button {
@@ -904,32 +896,83 @@ header {
 }
 
 .mom__data {
-  margin: 8px 0;
+  margin: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
 }
 
 .mom__data dd {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 16px;
-  text-align: center;
   border-left: 1px solid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mom__data dd:first-child {
   border-left: none;
 }
 
-.mom__data dd strong {
+.mom__data strong {
   font-size: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .mom {
+    height: 550px;
+    background-position: -20vw -25vh;
+  }
+  .mom h2 {
+    font-size: 45px;
+  }
+  .mom__name {
+    position: relative;
+    font-size: 96px;
+  }
+  .mom__name::before {
+    content: '18';
+    display: inline-block;
+    position: absolute;
+    right: 105%;
+    top: 24px;
+    font-size: 45px;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    background-color: #ff7700;
+  }
+  .mom__data {
+    margin: 45px 0;
+  }
+  .mom__data small {
+    font-size: 32px;
+  }
+  .mom__data strong {
+    font-size: 45px;
+  }
+  .mom .btn {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mom {
+    height: 600px;
+  }
 }
