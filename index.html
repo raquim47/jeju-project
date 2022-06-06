@@ -136,7 +136,7 @@
             <div class="main-swiper__txt-wrapper">
               <figcaption class="main-swiper__caption">
                 <small class="main-swiper__index">01</small>
-                <h3 class="main-swiper__title">제주UTD 홈경기 예매 바로가기  </h3>
+                <h3 class="main-swiper__title">제주UTD 홈경기 예매</h3>
                 <p class="main-swiper__content">다음경기 : 06.18 (토) 18:00 VS 인천</p>
               </figcaption>
             </div>
@@ -168,18 +168,14 @@
         </a>
       </div>
       <!-- If we need pagination -->
-      <div class="main-swiper__pagination">
-
-        
-      </div>
+      <div class="main-swiper__pagination pagination-wrap"></div>
     </section>
     <!-- section02 리그 정보 -->
     <section class="league-info">
-      <h2 class="league-info__title">
-        LEAGUE<br>
-        <strong class="bold">INFO</strong>RMATION
+      <h2 class="hide">
+        LEAGUE INFORMATION
       </h2>
-      <div class="league-info__inner">
+      <div class="league-info__inner container">
         <!-- 리그 정보 > 현재 순위 -->
         <div class="rank league-info__item">
           <div class="rank__data">
@@ -187,7 +183,7 @@
             <strong>3</strong>
             <h3>현재 순위 3위</h3>
             <p>2022.05.22 (4승 5무 5패 / 17점)</p>
-            <button class="btn">LEARN MORE<i class="fa-solid fa-angle-right"></i></button>
+            <button class="btn">Read More<i class="fa-solid fa-angle-right"></i></button>
           </div>
         </div>
         <!-- 경기 정보 > 순위 테이블 -->
@@ -208,7 +204,7 @@
             <tbody>
               <tr>
                 <td>1</td>
-                <td><img class="league-table__logo" src="img/ulsan-rank.png" alt="ulsan">울산 현대 축구단</td>
+                <td ><img class="league-table__logo" src="img/rank-ulsan.png" alt="ulsan">울산 현대 축구단</td>
                 <td>11</td>
                 <td>26</td>
                 <td>8</td>
@@ -217,7 +213,7 @@
               </tr>
               <tr>
                 <td>2</td>
-                <td><img class="league-table__logo" src="img/pohang-rank.png" alt="pohang">포항 스틸러스</td>
+                <td><img class="league-table__logo" src="img/rank-pohang.png" alt="pohang">포항 스틸러스</td>
                 <td>11</td>
                 <td>19</td>
                 <td>5</td>
@@ -226,7 +222,7 @@
               </tr>
               <tr class="league-table__ourTeam">
                 <td>3</td>
-                <td><img class="league-table__logo" src="img/jeju-rank.png" alt="jeju">제주 유나이티드</td>
+                <td><img class="league-table__logo" src="img/rank-jeju.png" alt="jeju">제주 유나이티드</td>
                 <td>11</td>
                 <td>19</td>
                 <td>5</td>
@@ -235,7 +231,7 @@
               </tr>
               <tr>
                 <td>4</td>
-                <td><img class="league-table__logo" src="img/jeonbuk-rank.png" alt="jeonbuk">전북 현대 모터스</td>
+                <td><img class="league-table__logo" src="img/rank-jeonbuk.png" alt="jeonbuk">전북 현대 모터스</td>
                 <td>11</td>
                 <td>19</td>
                 <td>5</td>
@@ -245,70 +241,56 @@
             </tbody>
           </table>
         </div>
-        <!-- 경기 정보 > 경기 결과 -->
-        <div class="result league-info__item">
-          <h3>MATCH RESULT</h3>
-          <div class="result__team">
-            <img src="img/jeju-match.png" alt="jeju-match">
-            <img src="img/pohang-match.png" alt="pohang-match">
-          </div>
-          <div class="result__info">
-            <small>2022.05.20 (금)</small>
-            <strong>2 : 1</strong>
-            <b>제주월드컵경기장</b>
-            <div class="result__btn">
-              <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
-              <button class="btn">경기기록<i class="fa-solid fa-angle-right"></i></button>
-            </div>
-          </div>
-        </div>
       </div>
       <!-- 경기 정보 > 다음 경기 -->
       <div class="next league-info__item">
-        <div class="next__title">
-          <h3>NEXT MATCH</h3>
-          <div class="d-day">
-            <div class="d-day__time">
-              <h4 id="day">00</h4>
-              <small>DAY</small>
+        <div class="next__inner">
+          <div class="next__left">
+            <div class="next__title">
+              <h3>NEXT MATCH</h3>
             </div>
-            <div class="d-day__time">
-              <h4 id="hour">00</h4>
-              <small>HOUR</small>
+            <div class="d-day">
+              <div class="d-day__time">
+                <h4 id="day">00</h4>
+                <small>DAY</small>
+              </div>
+              <div class="d-day__time">
+                <h4 id="hour">00</h4>
+                <small>HOUR</small>
+              </div>
+              <div class="d-day__time">
+                <h4 id="minute">00</h4>
+                <small>MIN</small>
+              </div>
+              <div class="d-day__time">
+                <h4 id="second">00</h4>
+                <small>SEC</small>
+              </div>
             </div>
-            <div class="d-day__time">
-              <h4 id="minute">00</h4>
-              <small>MIN</small>
-            </div>
-            <div class="d-day__time">
-              <h4 id="second">00</h4>
-              <small>SEC</small>
-            </div>
+            <button class="next__pc-btn btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
           </div>
-          <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
-        </div>
-        <div class="next__data">
-          <strong>VS</strong>
-          <small>
-            2022.06.22(수) 19:00<br>
-            서울월드컵경기장
-          </small>
-          <button class="btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
-          <div class="next__team">
-            <figure>
-              <img src="img/seoul-match.png" alt="">
-              <figcaption>서울FC</figcaption>
+          <div class="next__info">
+            <figure class="next__team">
+              <img src="img/match-seoul.png" alt="pohang-match">
+              <figcaption>FC서울</figcaption>
             </figure>
-            <figure>
-              <img src="img/jeju-match.png" alt="">
+            <div class="next__data">
+              <strong>VS</strong>
+              <small class="next__time">19:30</small>
+              <small class="next__date">2022.06.18(토)</small>
+              <small>서울월드컵경기장</small>
+            </div>
+            <figure class="next__team">
+              <img src="img/match-jeju.png" alt="pohang-match">
               <figcaption>제주UTD</figcaption>
             </figure>
           </div>
+          <button class="next__mobile-btn btn">빠른예매<i class="fa-solid fa-angle-right"></i></button>
         </div>
       </div>
     </section>
     <!-- section03 지난 경기 mom -->
-    <section class="mom">
+    <div class="mom">
       <h2>LAST ROUND MOM</h2>
       <div class="mom__tbox">
         <strong class="mom__name">JU MINGYU</strong>
@@ -331,7 +313,7 @@
         <button class="btn">프로필 상세<i class="fa-solid fa-angle-right"></i></button>
         <button class="btn">하이라이트<i class="fa-solid fa-angle-right"></i></button>
       </div>
-    </section>
+    </div>
   </main>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script src="js/custom.js "></script>

@@ -1,23 +1,16 @@
 .league-info {
-  padding-top: $large*3;
-  // background: url(../../img/section2-bg.jpg) center center;
-  // background-color: #000;
-  // background-blend-mode:luminosity;
-  &__title {
-    color: $gray2;
-    text-align: center;
-    font-size: $large*2;
-    margin-bottom: $large;
-  }
+  padding: $large 0;
 
   &__inner {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto $large*2;
+    margin: 0 auto $large;
   }
 
   &__item {
     width: 100%;
+    margin-bottom: $base;
   }
 }
 
@@ -25,7 +18,7 @@
 
 .rank {
   position: relative;
-  background: url(../../img/main-slide-03.jpeg) no-repeat;
+  background: url(../../img/rank-bg.jpeg) no-repeat;
   background-size: cover; 
   color: #fff;
   padding: $large 0;
@@ -85,8 +78,7 @@
   thead th{
     text-align: center;
     padding: $medium 0;
-    background-color: $orange;
-    color: #fff;
+    border-top: 1px solid $gray1;
     font-weight: 700;
   }
   
@@ -111,66 +103,13 @@
   }
   &__logo {
     float: left;
+    width: 48px;
     margin-right: 16px;
   }
 
   &__ourTeam > td {
     color: #fff;
-    background-color: $red;
-  }
-}
-
-// 리그 정보 > 경기 결과
-
-.result {
-  position: relative;
-  background-color: #fff;
-
-  h3 {
-    width: 100%;
-    padding: $base 0;
     background-color: $orange;
-    font-size: $ft-medium;
-    text-align: center;
-    color: #fff;
-  }
-  
-  &__team {
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: space-between;
-    width: 85%;
-    
-    img {
-      width: 100px;
-    }
-
-  }
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 32px 0;
-
-    small {
-      font-size: $ft-base;
-    }
-    strong {
-      font-size: $ft-large*1.2;
-    }
-  }
-
-  &__btn {
-    margin-top: $medium;
-
-    button {
-      background-color: $orange;
-    }
   }
 }
 
@@ -181,98 +120,124 @@
   padding: $large 0;
   background: url(../../img/main-slide-03.jpeg) no-repeat;
   background-size: cover; 
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply ;
   color: #fff;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
+  text-align: center;
 
   &__title {
-    position: relative;
+    font-size: $ft-large;
     text-align: center;
-
-    h3 {
-      font-size: $ft-large;
-    }
-    button {
-      display: none;
-    }
+    margin-bottom: $large;
   }
 
-  &__data {
-    position: relative;
+  &__info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
-
-    h3 {
-      font-size: $ft-large;
-    }
-
-    small {
-      font-size: $base;
-      margin: $base 0;
-      text-align: center;
-    }
-
-    strong {
-      font-size: $ft-large;
-    }
-
-    button {
-      background-color: transparent;
-    }
+    padding: $medium;
+    margin: 0 auto;
   }
 
   &__team {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 85%;
-    transform: translate(-50%, -50%);
-
-    figure {
-      width: 80px;
-    }
-    // 수정 필요!!!!!!!
-    img {
-      width: 100%;
-    }
+    width: 120px;
+    text-align: center;
 
     figcaption {
-      text-align: center;
-      margin-top: 8px;
-      font-size: $ft-small;
+      margin-top: $base;
     }
+  }
+  &__data {
+    align-self: center;
+    text-align: center;
+
+    strong {
+      display: block;
+      font-size: $ft-grand;
+    }
+
+    small {
+      display: block;
+      font-size: $base;
+    }
+    .next__time {
+      font-size: $large;
+    }
+  }
+
+  &__pc-btn {
+    display: none;
   }
 }
 
 .d-day {
   display: flex;
-  width: 450px;
+  width: 400px;
   margin: 0 auto;
 
   &__time {
     width: 25%;
     color: rgb(255, 255, 255);
+    text-align: center;
   }
   
   h4 {
     font-family: 'ds-digital';
-    font-size: $ft-grand*2;
+    font-size: $ft-grand*1.5;
   }
   small {
     font-family: 'ds-digital';
     font-size: $medium;
     font-weight: 800;
   }
+}
+
+@media screen and (min-width:768px) {
+  .league-table {
+    width: 60%;
+    order: 1;
+  }
+  .rank {
+    width: calc(40% - 20px);
+    order: 2;
+  }
+
+  .next {
+    &__info {
+      width: 700px;
+    }
+    &__team {
+      width: 180px;
+    }
+  }
+}
+
+@media screen and (min-width:1200px) {
+  .next {
+
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    &__left {
+      flex: 1;
+      text-align: center;
+    }
+
+    &__info {
+      border-left: 1px solid $gray1;
+      margin: 0;
+      padding-left: $large;
+    }
+
+    &__mobile-btn {
+      display: none;
+    }
+    &__pc-btn {
+      margin-top: $large;
+      display: inline-block;
+    }
+  }  
 }

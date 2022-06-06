@@ -34,6 +34,7 @@ a {
   border: 2px solid #fff;
   padding: $small 0;
   padding-left: $base;
+  background-color: transparent;
   color: #fff;
   transition: .3s;
 
@@ -50,13 +51,11 @@ a {
 }
 
 @media screen and (min-width:768px) {
-  .container {
-    max-width: 900px;
-  }
+  
 }
 
 @media screen and (min-width:1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1280px;
   }
 }
