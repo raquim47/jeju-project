@@ -1,5 +1,6 @@
 .main-swiper {
   position: relative;
+  overflow: hidden;
 
   &__img {
     width: 100%;
@@ -131,15 +132,6 @@
         position: relative;
         opacity: 1;
       }
-      // .swiper-pagination-bullet-active::before {
-      //   content: '';
-      //   position: absolute;
-      //   top: 0;
-      //   bottom: 0;
-      //   left: 0;
-      //   right: 0;
-      //   background-color: rgba($orange, 0.5);
-      // }
     }
 
     

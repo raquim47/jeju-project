@@ -1,11 +1,21 @@
 .league-info {
-  padding-top: $large;
+
+  &__head {
+    padding: $large*3 0 $large*2;
+    text-align: center;
+    font-size: $ft-large;
+    font-weight: 400;
+
+    span {
+      font-weight: 800;
+    }
+  }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 auto $large;
+    margin: 0 auto $large*3;
   }
 
   &__item {
@@ -191,6 +201,11 @@
 }
 
 @media screen and (min-width:768px) {
+  
+  .league-info__head {
+    font-size: $ft-grand;
+  }
+
   .league-table {
     width: 60%;
     order: 1;

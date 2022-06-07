@@ -1,0 +1,205 @@
+.jeju-sns {
+  text-align: center;
+
+  &__head {
+    padding-top: $large*3;
+    font-size: $ft-large;
+    font-weight: 400;
+    color: $orange;
+
+      span {
+      font-weight: 800;
+    }
+  }
+
+  &__tab-btn {
+    display: inline-block;
+    margin: $large $small $large*2;
+    padding: $micro $base;
+    color: $orange;
+    font-size: $ft-medium;
+    cursor: pointer;
+  }
+
+  &__radio {
+    display: none;
+  }
+
+  &__radio:checked + &__tab-btn{
+    background-color: $orange;
+    color: #fff;
+  }
+
+  &__tab-area {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 $base;
+  }
+
+  #youtube:checked ~ &__tab-area .tab-youtube {
+    display: flex;
+  }
+  #insta:checked ~ &__tab-area .tab-insta {
+    display: flex;
+  }
+}
+// ?? visible? display none??
+.tab {
+  display: none;
+  flex-wrap: wrap;
+  margin: 0 -$small;
+
+  &__item {
+    width: 50%;
+    position: relative;
+    padding: $small;
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    img {
+      transition: .3s ease-in-out;
+      object-fit: cover;
+      height: 280px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0,0,0, .9), rgba(0,0,0, 0));
+      opacity: 1;
+      transition: 0.3s ease-in-out;
+      z-index: $z1;
+    }
+  }
+  &__item:last-child {
+    display: none;
+  }
+  &__item:hover &__title {
+    transform: translateY(-30px);
+  }
+  &__item:hover img {
+    transform: scale(1.2);
+  }
+  &__item:hover &__link::before {
+    height: 80%;
+  }
+  &__item:hover .line-t{
+    opacity: 1;
+    width: 100%;
+  }
+  &__item:hover .line-b{
+    opacity: 1;
+    width: 100%;
+  }
+  &__item:hover .line-l{
+    opacity: 1;
+    height: 100%;
+  }
+  &__item:hover .line-r{
+    opacity: 1;
+    height: 100%;
+  }
+  &__icon {
+    position: absolute;
+    left: $large;
+    top: $medium;
+    font-size: $ft-large;
+    color: #fff;
+  }
+
+  &__title {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: $medium;
+    color: #fff;
+    text-align: left;
+    transition: .3s ease-in-out;
+    z-index: $z1;
+  }
+}
+.tab-insta {
+  display: none;
+
+  .tab__link {
+    img {
+      height: 350px;
+    }
+  }
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: $z2;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+.line-r {
+  height: 0;
+  bottom: auto;
+  border-right: 5px solid $orange;
+}
+.line-l {
+  height: 0;
+  top: auto;
+  border-left: 5px solid $orange;
+}
+.line-t {
+  width: 0;
+  right: auto;
+  border-top: 5px solid $orange;
+}
+.line-b {
+  width: 0;
+  left: auto;
+  border-bottom: 5px solid $orange;
+}
+
+@media screen and (min-width:768px) {
+  .jeju-sns {
+
+    &__head {
+      font-size: $ft-grand;
+    }
+
+    &__tab-area {
+      max-width: 1280px;
+    }
+    
+  }
+
+  .tab {
+
+    &__item {
+      width: 33.33%;
+    }
+
+    &__item:last-child {
+      display: block;
+    }
+
+    &__title {
+      font-size: $medium;
+    }
+  }
+
+  .tab-insta {
+    .tab__item {
+      width: 25%;
+    }
+  }
+}
